@@ -1,0 +1,48 @@
+<div id="sidebar" class="flex-sidebar flex-one">
+    <div class="sidebar-about flex-vertical">
+        <h3 class="sidebar-header">About</h3>
+        {{#get "users" slug="chelseabalderston" as |user|}}
+            {{#user}}
+                <img class="about-img" src="{{image}}"></img>
+                <div class="about-desc">{{bio}}</div>
+            {{/user}}
+        {{/get}}
+    </div>
+    <div class="sidebar-social flex-vertical">
+        <h3 class="sidebar-header">Follow Me</h3>
+        <div class="sidebar-social-container flex">
+            <a class="sidebar-social-link flex-one" href="https://twitter.com/chelsbalderston">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Twitter_Color.png"}}">
+            </a>
+            <a class="sidebar-social-link flex-one" href="https://facebook.com/elementsofeveryday">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Facebook_Color.png"}}">
+            </a>
+            <a class="sidebar-social-link flex-one" href="https://instagram.com/chelseabalderston">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Instagram_Color.png"}}">
+            </a>
+            <a class="sidebar-social-link flex-one" href="https://pinterest.com/madteaparty">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Pinterest_Color.png"}}">
+            </a>
+        </div>
+    </div>
+    <div class="sidebar-latest flex-vertical">
+        <h3 class="sidebar-header">Latest Posts</h3>
+        {{#get "posts" limit=5}}
+            {{#foreach posts}}
+                <a class="latest-posts flex" href="{{url}}">
+                    <div class="latest-posts-img">
+                        <img src="{{image}}"></img>
+                    </div>
+                    <div class="latest-posts-info flex-one flex-vertical">
+                        <div class="latest-posts-title">{{title}}</div>
+                        <div class="latest-posts-date">{{date}}</div>
+                    </div>
+                </a>
+            {{/foreach}}
+        {{/get}}
+    </div>
+    <div class="sidebar-instagram">
+        <h3 class="sidebar-header">Instagram</h3>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d35731145fc25e37a86bfe7e237b473a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
+</div>

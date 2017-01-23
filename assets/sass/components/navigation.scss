@@ -1,0 +1,26 @@
+/*
+ * Styles for the Navigation Bar
+ */
+
+.nav {
+    background: rgba(216, 216, 216, .8);
+    position: absolute;
+    width: calc(100% - 200px);
+    padding: 0 100px;
+    z-index: 1;
+    .flex-one {
+        margin: 0 25px;
+    }
+    .top-menu-items {
+        text-decoration: none;
+        margin: 0 auto;
+        padding: 0 50px;
+        font-size: 2rem;
+        &:hover {
+            color: #7f7f7f;
+        }
+        img {
+            max-height: 80px;
+        }
+    }
+}

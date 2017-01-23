@@ -1,0 +1,40 @@
+/*
+ * Footer Styles
+ */
+
+.site-footer {
+    margin: 0;
+    padding: 0;
+    background-color: #494949;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    border: 0;
+    a {
+        color: white;
+        &:hover {
+            color: #57A3E8;
+        }
+    }
+    p {
+        font-size: 16px;
+        margin: 5px;
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+}
+
+.footer-info {
+    margin: 0 40px;
+    .copyright-footer {
+        margin-right: auto;
+        @media (max-width: 475px) {
+            margin-right: 0;
+        }
+    }
+    @media (max-width: 475px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+}

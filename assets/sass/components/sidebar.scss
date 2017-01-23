@@ -1,0 +1,95 @@
+/*
+ * Sidebar Styles
+ */
+
+.flex-sidebar {
+    max-width: 300px;
+    min-width: 300px;
+    margin: 50px 10px 0;
+}
+
+.sidebar-content {
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    p {
+        margin: 10px 2.5px;
+        line-height: 16px;
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sidebar-header {
+    color: white;
+    background: #50585D;
+    text-align: center;
+    padding: 5px;
+    font-family: cormorant;
+    margin: 15px 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+.sidebar-social {
+    img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .sidebar-social-link {
+        text-align: center;
+    }
+}
+
+.sidebar-about {
+    margin-bottom: 15px;
+    .about-img {
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-desc {
+        font-size: 1.4rem;
+        font-family: cormorant;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+.latest-posts {
+    text-decoration: none;
+    border-bottom: 1px solid #50585D;
+    padding: 15px 0;
+    &:first-of-type {
+        padding-top: 0;
+    }
+    .latest-posts-img {
+        height: 60px;
+        overflow: hidden;
+        img {
+            width: 100px;
+        }
+    }
+    .latest-posts-info {
+        // margin: auto 0;
+        overflow: hidden;
+        white-space: nowrap;
+        .latest-posts-title {
+            font-size: 1.5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .latest-posts-date {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-style: italic;
+        }
+    }
+}
