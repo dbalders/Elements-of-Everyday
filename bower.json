@@ -4,6 +4,7 @@
     "jquery": "latest",
     "fluidbox": "latest",
     "remodal": "latest",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }

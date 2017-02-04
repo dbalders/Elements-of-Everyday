@@ -1,25 +1,65 @@
 {{!< default}}
-
-{{! This is a page template. A page outputs content just like any other post, and has all the same
-    attributes by default, but you can also customise it to behave differently if you prefer. }}
-
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
-{{#post}}
-	<div class="wrapper flex-wrapper">
-	    <div id="content" class="flex-content theme-content">
-	    	<article class="{{post_class}}">
-		    	<div class="post-wrapper">
-		            <div class="post-content">
-		            	{{!-- <h1 class="post-title">{{{title}}}</h1> --}}
-		            	{{#if image}}
-                            <img alt="Page cover image" class="post-img" src="{{image}}">
-                        {{/if}}
-		        		{{content}}
-		        	</div>
-		        </div>
-	       	</article>
-	    </div>
-	    {{> "sidebar"}}   
-	</div>
-{{/post}}
+    <div class="wrapper flex-wrapper">
+        <div class="post-header">
+            {{#post}}
+                <div class="post-header-image">
+                    <img src="{{image}}">
+                </div>
+                <div class="post-info">
+                    <h1 class="post-title">{{{title}}}</h1>
+                    <section class="post-meta">
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM, YYYY"}}</time>
+                    </section>
+                </div>
+            {{/post}}
+        </div>
+        <div id="content" class="flex-content theme-content">
+            <article class="{{post_class}}">
+                {{#post}}
+                    <div class="post-wrapper">
+                        <div class="post-content">
+                            <div class="post-header-info flex">
+                                <div class="post-header-text">
+                                    <h4 class="post-title">{{title}}</h4>
+                                    <section class="post-meta">
+                                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                                    </section>
+                                </div>
+                                <div class="post-header-social flex-vertical">
+                                    <h4 class="social-title">Share this Post</h4>
+                                    <div class="header-social-icons flex">
+                                        <a class="fa fa-twitter-square fa-lg" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                            <span class="hidden">Twitter</span>
+                                        </a>
+                                        <a class="fa fa-facebook-square fa-lg" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                            <span class="hidden">Facebook</span>
+                                        </a>
+                                        <a class="fa fa-google-plus-square fa-lg" href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                            <span class="hidden">Google+</span>
+                                        </a>
+                                        <a class="fa fa-pinterest-square fa-lg" href="http://pinterest.com/pin/create/button/?url={{url absolute="true"}}&media={{image absolute="true"}}&description={{title}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                            <span class="hidden">Pinterest</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{#if image}}
+                                {{!-- <img src="{{image}}"> --}}
+                            {{/if}}
+                            {{content}}
+                            <div class="sig-img-container">
+                                <img id="sig-img" src="{{asset "images/icons/sig-img.png"}}" />
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+                {{/post}}
+            </article>
+        </div>
+        {{> "sidebar"}}
+        <div style="clear:both;"></div>
+    </div>
 </main>

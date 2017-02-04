@@ -5,22 +5,27 @@
 .nav {
     background: rgba(216, 216, 216, .8);
     position: absolute;
-    width: calc(100% - 200px);
-    padding: 0 100px;
+    top: 0;
     z-index: 1;
-    .flex-one {
-        margin: 0 25px;
-    }
+    width: 100%;
     .top-menu-items {
         text-decoration: none;
         margin: 0 auto;
-        padding: 0 50px;
         font-size: 2rem;
         &:hover {
             color: #7f7f7f;
         }
         img {
             max-height: 80px;
+        }
+    }
+    @media (max-width: 600px) {
+        position: relative;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        .top-menu-items {
+            margin: 15px auto;
+            font-size: 3rem;
         }
     }
 }

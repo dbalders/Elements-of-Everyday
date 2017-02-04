@@ -1,33 +1,53 @@
 {{!< default}}
 
+<link href="https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i" rel="stylesheet">
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<div class="home-carousel">
+    {{#get "posts" limit="1"}}
+        {{#foreach posts}}
+            {{!-- <div class="home-carousel-image flex-vertical" style="background: url('{{image}}') no-repeat center center fixed;background-size:cover;"> --}}
+            <a class="carousel-overlay" href="{{url}}"></a>
+            <div class="home-carousel-image">
+                <img src="{{image}}">
+            </div>
+            <a class="carousel-info flex-vertical" href="{{url}}">
+                <div class="carousel-date">{{date}}</div>
+                <div class="carousel-title">{{title}}</div>
+            </a>   
+        {{/foreach}}
+    {{/get}}
+</div>
 <main class="content" role="main">
-    <div class="wrapper flex-wrapper">
-        <div id="content" class="flex-content tag-content">
-            {{#foreach posts}}
-                <article class="{{post_class}}">
-                    <header class="post-header">
-                        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-                        <section class="post-meta">
-                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
-                        </section>
-                    </header>
+<div class="wrapper flex-wrapper">
+    <div id="content" class="flex-content flex home-content">
+        <div class="home-section-container flex-vertical">
+            <div class="home-section flex-vertical flex-center">
+                {{#foreach posts}}
+                <article class="{{post_class}} home-post">
                     <section class="post-excerpt">
-                        {{#if image}}<div class="center"><img class="post-index-image" alt="Post cover image" src="{{image}}"></div>{{/if}}
-                        <p>{{{excerpt words="50"}}}&hellip; <a class="read-more" href="{{url}}">Read More</a></p>
+                        <header class="home-post-header">
+                            <h2 class="home-post-title"><a href="{{url}}">{{title}}</a></h2>
+                            <time class="home-post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM, YYYY"}}</time>
+                        </header>
+                        {{!-- <img src="{{image}}"> --}}
+                        <p>{{content}}</p>
                     </section>
+                    <footer class="home-post-meta">
+                        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+                        {{author}}
+                        {{tags prefix=" on "}}
+                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                    </footer>
                 </article>
-            {{/foreach}}
-
-            {{pagination}}
+                {{/foreach}}
+            </div>
         </div>
-            {{> "sidebar"}}  
-        </div>
-    </div> 
+        {{> "sidebar"}}
+    </div>
+</div>
+<script src="/assets/bower_components/moment/min/moment.min.js"></script>
 </main>
-
-<script>
-    //Remove links to github
-    for (i = 0; i < $('.post-excerpt p').length; i++) {
-        $('.post-excerpt p')[i].innerHTML = $('.post-excerpt p')[i].innerHTML.replace("Link to Example Code on Github", "")
-    }
-</script>

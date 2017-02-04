@@ -5,9 +5,9 @@
 .site-footer {
     margin: 0;
     padding: 0;
-    background-color: #494949;
     font-family: "Open Sans", sans-serif;
     color: white;
+    background-color: #50585D;
     border: 0;
     a {
         color: white;
@@ -26,15 +26,34 @@
 }
 
 .footer-info {
-    margin: 0 40px;
-    .copyright-footer {
-        margin-right: auto;
-        @media (max-width: 475px) {
-            margin-right: 0;
+    height: 35px;
+    .footer-copyright {
+        margin: auto auto auto 20px;
+    }
+    .footer-social {
+        margin: auto;
+        a {
+            margin: auto 15px;
+            height: 25px;
+            width: 25px;
         }
     }
-    @media (max-width: 475px) {
+    .footer-contact {
+        margin: auto 25px auto auto;
+    }
+    @media (max-width: 600px) {
+        height: auto;
         flex-direction: column;
         -webkit-flex-direction: column;
+        .footer-copyright, .footer-contact {
+            margin: 15px auto;
+            font-size: 1.5rem;
+        }
+        .footer-social {
+            a {
+                height: 50px;
+                width: 50px;
+            }
+        }
     }
 }

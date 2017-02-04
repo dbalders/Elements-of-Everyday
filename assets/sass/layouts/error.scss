@@ -2,6 +2,42 @@
  * Error Page Styles
  */
 
+.error-content {
+    margin-top: 80px;
+}
+
 .error-page {
-	text-align: center;
+    text-align: center;
+}
+
+.error-header {
+	font-family: cormorant;
+}
+
+.error-desc {
+	font-family: cormorant;
+}
+
+.error-posts {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    .error-post-img {
+        height: 200px;
+        overflow: hidden;
+        img {
+            margin-top: -25%;
+        }
+    }
+    .error-post-info {
+        .error-post-date {
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.25rem;
+        }
+    }
+    &:hover {
+    	opacity: .8;
+    }
 }

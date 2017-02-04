@@ -4,6 +4,7 @@
 
 body {
     font-size: 1.7rem;
+    font-family: cormorant,'Open Sans',sans-serif;
 }
 
 .flex-wrapper {
@@ -14,7 +15,7 @@ body {
     -webkit-justify-content: center;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         flex-direction: column;
         -webkit-flex-direction: column;
     }
@@ -31,9 +32,6 @@ body {
         -webkit-flex: 1 0 auto;
     }
     @media (max-width: 550px) {}
-    img {
-        max-width: 90%;
-    }
 }
 
 .flex {
@@ -80,6 +78,10 @@ body {
     margin: auto;
 }
 
+.post {
+    margin-bottom: 0;
+}
+
 .post-excerpt p {
     @media (max-width: 700px) {
         font-size: 1.1em;
@@ -88,4 +90,8 @@ body {
 
 #content {
     width: 100%;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
 }
