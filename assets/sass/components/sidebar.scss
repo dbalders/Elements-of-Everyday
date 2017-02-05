@@ -35,6 +35,47 @@
     }
 }
 
+#optin {
+    margin: 5px auto;
+    text-align: center;
+    background: #929292;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: cormorant;
+    font-size: 2.25rem;
+}
+
+.modal-header {
+    font-family: cormorant;
+    color: #50585D;
+}
+
+.modal-email,
+.modal-name {
+    font-family: cormorant;
+    font-size: 2rem;
+    width: 50%;
+    margin: 15px auto;
+    input {
+        width: 100%;
+        border: 1px solid #7b8489;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.modal-submit {
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    background-color: #50585D;
+    color: white;
+    border: 0;
+    font-size: 2rem;
+}
+
 .sidebar-header {
     color: white;
     color: #50585D;
@@ -124,6 +165,13 @@
                 font-size: 1.6rem;
             }
         }
+    }
+}
+
+.latest-posts-popular {
+    &:last-of-type {
+        padding-bottom: 0;
+        border-bottom: 0;
     }
 }
 
