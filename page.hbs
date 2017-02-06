@@ -3,7 +3,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div class="post-header">
+        <div class="posts-header">
             {{#post}}
                 <div class="post-header-image">
                     <img src="{{image}}">
@@ -50,9 +50,6 @@
                                 {{!-- <img src="{{image}}"> --}}
                             {{/if}}
                             {{content}}
-                            <div class="sig-img-container">
-                                <img id="sig-img" src="{{asset "images/icons/sig-img.png"}}" />
-                            </div>
                         </div>
                         </section>
                     </div>
@@ -60,6 +57,22 @@
             </article>
         </div>
         {{> "sidebar"}}
-        <div style="clear:both;"></div>
     </div>
 </main>
+
+<script>
+    var coverImg = $(".post-header-image img");
+    var landscape = false;
+    if (coverImg.width() < coverImg.height()){
+        coverImg.css('margin-top', '-25%');
+    } else {
+        coverImg.css('margin-top', '0');
+        var landscape = true;
+    }
+
+    $(window).load(setCoverImage(coverImg, landscape));
+
+    $(window).resize(function() {
+        setCoverImage(coverImg, landscape)
+    });
+</script>
