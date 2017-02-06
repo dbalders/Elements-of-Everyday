@@ -10,3 +10,22 @@ function fluidBoxInit() {
             viewportFill: 0.8,
         });
 }
+
+function setCoverImage(coverImg, landscape) {
+    console.log(landscape)
+    if (landscape === true) {
+        if (coverImg.height() <= 460) {
+            coverImg.css('width', 'auto');
+            coverImg.css('height', '100%');
+        }
+        if (coverImg.width() < $(window).width()) {
+            coverImg.css('width', '100%');
+            coverImg.css('height', 'auto');
+        }
+        if ($(window).width() < 500) {
+            coverImg.css('margin-left', '-25%')
+        } else {
+            coverImg.css('margin-left', '0')
+        }
+    }
+}

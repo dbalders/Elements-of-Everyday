@@ -62,9 +62,17 @@
 
 <script>
     var coverImg = $(".post-header-image img");
+    var landscape = false;
     if (coverImg.width() < coverImg.height()){
         coverImg.css('margin-top', '-25%');
-    } else
+    } else {
         coverImg.css('margin-top', '0');
+        var landscape = true;
     }
+
+    $(window).load(setCoverImage(coverImg, landscape));
+
+    $(window).resize(function() {
+        setCoverImage(coverImg, landscape)
+    });
 </script>
