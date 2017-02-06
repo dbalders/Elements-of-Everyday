@@ -26,5 +26,7 @@ function setCoverImage(coverImg, landscape) {
         } else {
             coverImg.css('margin-left', '0')
         }
+
     }
+    coverImg.show();
 }
