@@ -7,7 +7,6 @@
 <div class="home-carousel">
     {{#get "posts" limit="1"}}
         {{#foreach posts}}
-            {{!-- <div class="home-carousel-image flex-vertical" style="background: url('{{image}}') no-repeat center center fixed;background-size:cover;"> --}}
             <a class="carousel-overlay" href="{{url}}"></a>
             <div class="home-carousel-image">
                 <img src="{{image}}">
@@ -48,4 +47,12 @@
     </div>
 </div>
 <script src="/assets/bower_components/moment/min/moment.min.js"></script>
+<script>
+    var coverImg = $(".home-carousel-image img");
+    if (coverImg.width() < coverImg.height()){
+        coverImg.css('margin-top', '-25%');
+    } else
+        coverImg.css('margin-top', '0');
+    }
+</script>
 </main>

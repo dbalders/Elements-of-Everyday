@@ -3,7 +3,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div class="post-header">
+        <div class="posts-header">
             {{#post}}
                 <div class="post-header-image">
                     <img src="{{image}}">
@@ -59,3 +59,12 @@
         {{> "sidebar"}}
     </div>
 </main>
+
+<script>
+    var coverImg = $(".post-header-image img");
+    if (coverImg.width() < coverImg.height()){
+        coverImg.css('margin-top', '-25%');
+    } else
+        coverImg.css('margin-top', '0');
+    }
+</script>
