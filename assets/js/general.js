@@ -12,7 +12,6 @@ function fluidBoxInit() {
 }
 
 function setCoverImage(coverImg, landscape) {
-    console.log(landscape)
     if (landscape === true) {
         if (coverImg.height() <= 460) {
             coverImg.css('width', 'auto');
