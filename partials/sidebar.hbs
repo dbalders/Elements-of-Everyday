@@ -3,7 +3,7 @@
         <h3 class="sidebar-header">About</h3>
         {{#get "users" slug="chelseabalderston" as |user|}}
             {{#user}}
-                <img class="about-img" src="{{image}}"></img>
+                <img class="about-img" src="{{image}}?w=300"></img>
                 <div class="about-desc">{{bio}}</div>
             {{/user}}
         {{/get}}
@@ -69,7 +69,7 @@
             {{#foreach posts}}
                 <a class="latest-posts latest-posts-popular flex" href="{{url}}">
                     <div class="latest-posts-img">
-                        <img src="{{image}}?w=200"></img>
+                        <img src="{{image}}?w=150"></img>
                     </div>
                     <div class="latest-posts-info flex-one flex-vertical">
                         <div class="latest-posts-title">{{title}}</div>
@@ -91,7 +91,7 @@
             {{#foreach posts}}
                 <a class="latest-posts flex" href="{{url}}">
                     <div class="latest-posts-img">
-                        <img src="{{image}}?w=200"></img>
+                        <img src="{{image}}?w=150"></img>
                     </div>
                     <div class="latest-posts-info flex-one flex-vertical">
                         <div class="latest-posts-title">{{title}}</div>
