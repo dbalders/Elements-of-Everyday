@@ -28,7 +28,12 @@ function setCoverImage(coverImg, landscape) {
         } else {
             coverImg.css('margin-left', '0')
         }
-
+    }
+    if (coverImg.height() < 575) {
+        coverImg.css('margin-top', '0');
+    }
+    if (coverImg.width() < ($(window).width() * 1.5)) {
+        coverImg.css('margin-left', '0');
     }
     coverImg.show();
 }
