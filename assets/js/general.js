@@ -22,6 +22,8 @@ function setCoverImage(coverImg, landscape) {
             coverImg.css('height', 'auto');
         }
         if ($(window).width() < 500) {
+            console.log(coverImg.height());
+            console.log(coverImg.width());
             coverImg.css('margin-left', '-25%')
         } else {
             coverImg.css('margin-left', '0')
