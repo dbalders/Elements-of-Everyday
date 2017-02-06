@@ -4,12 +4,17 @@
 
  .post {
     width: 100%;
+    margin: 0;
+    max-width: 100%;
  }
 
 .post-content {
+    width: 80%;
+    margin: auto;
     p {
         margin: 1.6rem 0 0 0;
         line-height: 1.6em;
+        font-family: cormorant;
         img {
             margin: auto;
         }
@@ -82,11 +87,17 @@
             font-size: 1.6rem;
         }
     }
+    @media (max-width: 500px) {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        .post-header-text {
+            margin: auto;
+        }
+    }
 }
 
 .post-header-social {
     margin-left: auto;
-    margin-top: 5px;
     .social-title {
         font-size: 2rem;
         font-family: cormorant;
@@ -96,10 +107,22 @@
     }
     .header-social-icons {
         margin: auto 0;
+        font-size: 2rem;
         a {
             margin: auto;
             text-decoration: none;
             color: #50585D;
+        }
+    }
+    @media (max-width: 500px) {
+        margin: auto;
+        width: 100%;
+        .social-title {
+            display: none;
+        }
+        .header-social-icons {
+            margin: 10px 0;
+            font-size: 4rem;
         }
     }
 }
