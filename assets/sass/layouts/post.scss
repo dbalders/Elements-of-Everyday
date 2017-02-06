@@ -2,11 +2,11 @@
  * Post Styles
  */
 
- .post {
+.post {
     width: 100%;
     margin: 0;
     max-width: 100%;
- }
+}
 
 .post-content {
     width: 80%;
@@ -190,6 +190,19 @@
     }
 }
 
+.affiliate-disclaimer {
+    font-style: italic;
+    line-height: 1.5rem;
+    span {
+        font-weight: bold;
+    }
+    @media (max-width: 600px) {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
    ========================================================================== */
@@ -224,10 +237,12 @@
     background-size: cover;
     overflow: hidden;
 }
+
 .read-next-story:hover:before {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     transition: all 0.2s ease;
 }
+
 .read-next-story:hover .post:before {
     color: #222;
     background: #fff;
@@ -242,7 +257,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     transition: all 0.5s ease;
 }
 
@@ -257,11 +272,12 @@
     text-transform: uppercase;
     font-size: 1.1rem;
     font-family: cormorant;
-    color: rgba(255,255,255,0.8);
-    border: rgba(255,255,255,0.5) 1px solid;
+    color: rgba(255, 255, 255, 0.8);
+    border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 4px;
     transition: all 0.5s ease;
 }
+
 .read-next-story.prev .post:before {
     content: "You Might Enjoy";
 }
@@ -274,10 +290,12 @@
 
 .read-next-story p {
     margin: 0;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
+
 /* Special styles for posts with no cover images */
+
 .read-next-story.no-cover {
     background: #f5f8fa;
 }
@@ -287,27 +305,31 @@
 }
 
 .read-next-story.no-cover .post:before {
-    color: rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.2);
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .read-next-story.no-cover h2 {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .read-next-story.no-cover p {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 
+
 /* if there are two posts without covers, put a border between them */
+
 .read-next-story.no-cover + .read-next-story.no-cover {
-    border-left: rgba(0,0,100,0.04) 1px solid;
+    border-left: rgba(0, 0, 100, 0.04) 1px solid;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+
 /* Correctly position site-footer when next to the .read-next container */
+
 .read-next + .site-footer {
     position: absolute;
     bottom: 0;
