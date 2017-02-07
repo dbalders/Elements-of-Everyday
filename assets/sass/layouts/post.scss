@@ -14,6 +14,9 @@
     p {
         font-size: 1.6rem;
         text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         @media (max-width: 800px) {
             font-size: 1.75rem;
         }
@@ -193,6 +196,7 @@
 .affiliate-disclaimer {
     font-style: italic;
     line-height: 1.5rem;
+    max-width: 800px;
     span {
         font-weight: bold;
     }
