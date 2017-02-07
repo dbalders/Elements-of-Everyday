@@ -193,20 +193,6 @@
     }
 }
 
-.affiliate-disclaimer {
-    font-style: italic;
-    line-height: 1.5rem;
-    max-width: 800px;
-    margin: auto;
-    span {
-        font-weight: bold;
-    }
-    @media (max-width: 600px) {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-    }
-}
-
 #disqus_thread {
     max-width: 800px;
     margin: auto;
