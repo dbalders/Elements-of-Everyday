@@ -5,7 +5,7 @@
 .flex-sidebar {
     min-width: 300px;
     max-width: 300px;
-    margin: 25px 10px 0;
+    margin: 25px auto 0 25px;
     @media (max-width: 900px) {
         min-width: 250px;
         max-width: 250px;
@@ -38,7 +38,7 @@
 #optin {
     margin: 5px auto;
     text-align: center;
-    background: #929292;
+    background-color: black;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -77,10 +77,9 @@
 }
 
 .sidebar-header {
-    color: white;
-    color: #50585D;
-    border-bottom: 1px solid #50585D;
-    border-top: 1px solid #50585D;
+    color: black;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
     text-align: center;
     padding: 5px;
     font-family: cormorant;
@@ -128,7 +127,6 @@
 
 .latest-posts {
     text-decoration: none;
-    border-bottom: 1px solid #50585D;
     padding: 15px 0;
     &:first-of-type {
         padding-top: 0;
@@ -151,6 +149,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
             font-family: cormorant;
+            color: black;
         }
         .latest-posts-date {
             font-size: 1.2rem;

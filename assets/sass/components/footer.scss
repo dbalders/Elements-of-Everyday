@@ -7,7 +7,7 @@
     padding: 0;
     font-family: "Open Sans", sans-serif;
     color: white;
-    background-color: #50585D;
+    background-color: black;
     border: 0;
     a {
         color: white;
@@ -32,10 +32,12 @@
     }
     .footer-social {
         margin: auto;
-        a {
+        a img {
             margin: auto 15px;
             height: 25px;
             width: 25px;
+            align-self: center;
+            -webkit-align-self: center;
         }
     }
     .footer-contact {

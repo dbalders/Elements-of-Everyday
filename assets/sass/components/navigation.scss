@@ -3,15 +3,13 @@
  */
 
 .nav {
-    background: rgba(216, 216, 216, .8);
-    position: absolute;
-    top: 0;
-    z-index: 1;
+    background: white;
     width: 100%;
     .top-menu-items {
         text-decoration: none;
         margin: 0 auto;
         font-size: 2rem;
+        color: black;
         &:hover {
             color: #7f7f7f;
         }

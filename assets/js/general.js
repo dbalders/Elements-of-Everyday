@@ -41,5 +41,6 @@ function setCoverImage(coverImg, landscape) {
             coverImg.css('margin-top', '-25%');
         }
     }
+    console.log(landscape);
     coverImg.show();
 }

@@ -22,9 +22,8 @@
     .carousel-overlay {
         background-color: rgba(107, 107, 107, .3);
         position: absolute;
-        top: 80px;
         width: 100%;
-        height: calc(100% - 80px);
+        height: 100%;
         z-index: 1;
         @media (max-width: 600px) {
             top: 0;
@@ -54,12 +53,13 @@
 
 .home-post-header {
     margin-bottom: 20px;
+    text-align: left;
     .home-post-title {
         font-family: cormorant;
-        text-align: center;
         margin: 0;
         a {
             text-decoration: none;
+            color: black;
         }
     }
     .home-post-date {
@@ -70,14 +70,13 @@
 }
 
 .home-section-container {
-    flex: 3;
-    -webkit-flex: 3;
+    margin-left: auto;
 }
 
 .home-section {
     width: 80%;
     margin: 25px auto;
-    max-width: 800px;
+    max-width: 750px;
     @media (max-width: 800px) {
         // width: 90%;
     }

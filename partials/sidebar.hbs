@@ -1,27 +1,24 @@
 <div id="sidebar" class="flex-sidebar flex-one">
     <div class="sidebar-about flex-vertical">
-        <h3 class="sidebar-header">About</h3>
         {{#get "users" slug="chelseabalderston" as |user|}}
             {{#user}}
-                <img class="about-img" src="{{image}}?w=300"></img>
                 <div class="about-desc">{{bio}}</div>
             {{/user}}
         {{/get}}
     </div>
     <div class="sidebar-social flex-vertical">
-        <h3 class="sidebar-header">Follow Me</h3>
         <div class="sidebar-social-container flex">
             <a class="sidebar-social-link flex-one" href="https://twitter.com/chelsbalderston">
-                <img class="sidebar-icon" src="{{asset "/images/icons/Twitter.svg"}}">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Twitter.png"}}">
             </a>
             <a class="sidebar-social-link flex-one" href="https://facebook.com/elementsofeveryday">
-                <img class="sidebar-icon" src="{{asset "/images/icons/Facebook.svg"}}">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Facebook.png"}}">
             </a>
             <a class="sidebar-social-link flex-one" href="https://instagram.com/chelseabalderston">
-                <img class="sidebar-icon" src="{{asset "/images/icons/Instagram.svg"}}">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Instagram.png"}}">
             </a>
             <a class="sidebar-social-link flex-one" href="https://pinterest.com/madteaparty">
-                <img class="sidebar-icon" src="{{asset "/images/icons/Pinterest.svg"}}">
+                <img class="sidebar-icon" src="{{asset "/images/icons/Pinterest.png"}}">
             </a>
         </div>
     </div>
@@ -63,6 +60,11 @@
             <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
         </div>
     </div>
+    <div class="sidebar-instagram">
+        <!-- LightWidget WIDGET -->
+        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="//lightwidget.com/widgets/e199dce216e954489914b4b7b5867bdb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
     <div class="sidebar-latest flex-vertical">
         <h3 class="sidebar-header">Popular Posts</h3>
         {{#get "posts" filter="tags:popular" limit=4}}
@@ -78,12 +80,6 @@
                 </a>
             {{/foreach}}
         {{/get}}
-    </div>
-    <div class="sidebar-instagram">
-        <h3 class="sidebar-header">Instagram</h3>
-        <!-- LightWidget WIDGET -->
-        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="//lightwidget.com/widgets/e199dce216e954489914b4b7b5867bdb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </div>
     <div class="sidebar-latest flex-vertical">
         <h3 class="sidebar-header">Latest Posts</h3>
