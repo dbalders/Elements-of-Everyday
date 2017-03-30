@@ -3,14 +3,19 @@
  */
 
 .post {
-    width: 100%;
-    margin: 0 0 20px 0;
-    max-width: 100%;
+    margin: 0 0 0 auto;
+    max-width: 900px;
 }
+
+// .post-wrapper {
+//     max-width: 900px;
+//     margin: auto;
+// }
 
 .post-content {
     width: 80%;
     margin: auto;
+    color: black;
     p {
         font-size: 1.6rem;
         text-align: left;
@@ -123,7 +128,7 @@
         a {
             margin: auto;
             text-decoration: none;
-            color: #50585D;
+            color: black;
         }
     }
     @media (max-width: 500px) {

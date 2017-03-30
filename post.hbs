@@ -17,7 +17,7 @@
                 </div>
             {{/post}}
         </div>
-        <div id="content" class="flex-content theme-content">
+        <div id="content" class="flex-content theme-content flex">
             <article class="{{post_class}}">
                 {{#post}}
                     <div class="post-wrapper">
@@ -74,8 +74,9 @@
                         </div>   
                     </div>
             </article>
+            {{> "sidebar"}}
         </div>
-        {{> "sidebar"}}
+        
     </div>
 </main>
 <aside class="read-next">

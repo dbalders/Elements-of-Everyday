@@ -5,7 +5,7 @@
 .flex-sidebar {
     min-width: 300px;
     max-width: 300px;
-    margin: 25px auto 0 25px;
+    margin: 40px auto 0 25px;
     @media (max-width: 900px) {
         min-width: 250px;
         max-width: 250px;
@@ -36,7 +36,7 @@
 }
 
 #optin {
-    margin: 5px auto;
+    margin: 25px auto;
     text-align: center;
     background-color: black;
     border-radius: 5px;
@@ -176,5 +176,5 @@
 }
 
 .lightwidget-widget {
-    margin-top: 0;
+    margin: 0;
 }
