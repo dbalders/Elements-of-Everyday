@@ -104,10 +104,8 @@
 <script>
     var coverImg = $(".post-header-image img");
     var landscape = false;
-    if (coverImg.width() < coverImg.height()){
-        coverImg.css('margin-top', '-25%');
-    } else {
-        coverImg.css('margin-top', '0');
+    if (coverImg.width() > coverImg.height()) {
+        coverImg.addClass('landscape-header-image');
         var landscape = true;
     }
 
