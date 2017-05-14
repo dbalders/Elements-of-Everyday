@@ -60,9 +60,21 @@
 
         img.landscape-header-image {
             margin-top: 0;
-            width: auto;
-            height: 100%;
+            width: 100%;
+            min-height: 100%;
             margin-left: -25%;
+            @media (min-width: 1200px) {
+                margin-top: -25%;
+            }
+            @media (max-width: 700px) {
+                width: auto;
+                max-width: 125%;
+                margin-left: 15%;
+            }
+            @media (max-width: 550px) {
+                width: auto;
+                max-width: 160%;
+            }
         }
     }
     .post-info {
