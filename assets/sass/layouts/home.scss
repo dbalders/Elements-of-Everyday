@@ -61,6 +61,10 @@
     }
 }
 
+article.home-post {
+    margin-top: 25px;
+}
+
 .home-post-header {
     margin-bottom: 20px;
     text-align: left;
@@ -85,7 +89,7 @@
 
 .home-section {
     width: 80%;
-    margin: 25px auto;
+    margin: 0 auto 25px auto;
     max-width: 900px;
     @media (max-width: 800px) {
         // width: 90%;
@@ -127,7 +131,6 @@
 
 .home-post-meta {
     display: inline-block;
-    color: #9EABB3;
     font-size: 1.5rem;
     img {
         width: 30px;
@@ -136,11 +139,10 @@
     }
     a {
         text-decoration: none;
-        color: #9EABB3;
         margin-left: 10px;
     }
     time {
-        border-left: 1px solid #d8d8d8;
+        border-left: 1px solid;
         padding-left: 12px;
         margin-left: 8px;
     }
