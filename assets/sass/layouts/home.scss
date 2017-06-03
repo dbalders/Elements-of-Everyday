@@ -88,9 +88,9 @@ article.home-post {
 }
 
 .home-section {
-    width: 80%;
+    width: 90%;
     margin: 0 auto 25px auto;
-    max-width: 900px;
+    max-width: 1000px;
     @media (max-width: 800px) {
         // width: 90%;
     }
@@ -129,6 +129,17 @@ article.home-post {
     }
 }
 
+.read-more {
+    padding: 15px;
+    border: 1px solid;
+    margin-top: 10px;
+    text-decoration: none;
+    &:hover {
+        background-color: #e0e0e0;
+        color: black;
+    }
+}
+
 .home-post-meta {
     display: inline-block;
     font-size: 1.5rem;
@@ -154,4 +165,13 @@ article.home-post {
     .older-posts {
         border: 0;
     }
+}
+
+.post {
+    border-bottom: 1px solid #50585D;
+    max-width: 1000px;
+}
+
+.post:after {
+    border: 1px solid #50585D;
 }
