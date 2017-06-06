@@ -98,3 +98,16 @@
         </iframe> 
     </div>
 </div>
+
+<script>
+    var coverImg = $(".latest-posts-img img");
+    
+    for(i = 0; i < coverImg.length; i++) {
+        var landscape = false;
+        if ($(coverImg[i]).width() > $(coverImg[i]).height()) {
+            console.log('here');
+            var landscape = true;
+            $(coverImg[i]).css('margin-top', '0');
+        }
+    }
+</script>
