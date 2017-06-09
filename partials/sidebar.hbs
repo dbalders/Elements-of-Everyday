@@ -33,10 +33,10 @@
         <iframe src="//lightwidget.com/widgets/e199dce216e954489914b4b7b5867bdb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </div>
     <div class="sidebar-ad center">
-        <a href="https://click.linksynergy.com/fs-bin/click?id=vPt5041vjCM&offerid=499524.46&subid=0&type=4"><IMG border="0"   alt="Frame Denim" src="https://ad.linksynergy.com/fs-bin/show?id=vPt5041vjCM&bids=499524.46&subid=0&type=4&gridnum=12"></a>
+        <a href="https://click.linksynergy.com/fs-bin/click?id=vPt5041vjCM&offerid=448992.5&subid=0&type=4"><IMG border="0"   alt="REVOLVE Sale 061616 300x250 Floral" src="https://ad.linksynergy.com/fs-bin/show?id=vPt5041vjCM&bids=448992.5&subid=0&type=4&gridnum=13"></a>
     </div>
     <div class="sidebar-ad center">
-        <a href="https://click.linksynergy.com/fs-bin/click?id=vPt5041vjCM&offerid=357944.10021256&subid=0&type=4"><IMG border="0"   alt="NORDSTROM -  Shop the Half-Yearly Sale for Men, Women & Kids through June 4" src="https://ad.linksynergy.com/fs-bin/show?id=vPt5041vjCM&bids=357944.10021256&subid=0&type=4&gridnum=19"></a>
+        <a href="https://click.linksynergy.com/fs-bin/click?id=vPt5041vjCM&offerid=357944.10021363&subid=0&type=4"><IMG border="0"   alt="NORDSTROM - The Shoe Trends You Need to Wear Right Now" src="https://ad.linksynergy.com/fs-bin/show?id=vPt5041vjCM&bids=357944.10021363&subid=0&type=4&gridnum=19"></a>
     </div>
     <div class="sidebar-latest flex-vertical">
         <h3 class="sidebar-header">Popular Posts</h3>
@@ -54,30 +54,27 @@
             {{/foreach}}
         {{/get}}
     </div>
-    <div class="sidebar-latest flex-vertical">
-        <h3 class="sidebar-header">Latest Posts</h3>
-        {{#get "posts" limit=4}}
-            {{#foreach posts}}
-                <a class="latest-posts flex" href="{{url}}">
-                    <div class="latest-posts-img">
-                        <img src="{{image}}?w=150"></img>
-                    </div>
-                    <div class="latest-posts-info flex-one flex-vertical">
-                        <div class="latest-posts-title">{{title}}</div>
-                        <div class="latest-posts-date">{{date}}</div>
-                    </div>
-                </a>
-            {{/foreach}}
-
-            <script>
-                for (i = 0; i < $('.latest-posts-img img').length; i++) {
-                    var sideImg = $(".latest-posts-img img");
-
-                    if ($(sideImg[i]).width() > $(sideImg[i]).height()) {
-                        $(sideImg[i]).addClass('landscape-sidebar-image');
-                    }
-                }
-            </script>
-        {{/get}}
+    <div class="shopsense-widget" data-options="%7B%22widgetId%22%3A%2259318a99dd4edb5f06ff6756%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid6644-39435238-4%22%2C%22size%22%3A180%2C%22columns%22%3A1%2C%22rows%22%3A1%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%2C%22iframeHeight%22%3A255%2C%22iframeWidth%22%3A255%7D"> 
+        <h3 class="sidebar-header">Wish List</h3>
+        <script> !function(doc,s,id){ var e, p, cb; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; cb = new Date().getTime().toString(); p = '//shopsensewidget.shopstyle.com/widget-script.js?cb=1496418236389?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.ss_shopsense === 'object'){ if(doc.readyState === 'complete'){ window.ss_shopsense.init(); } } }(document, 'script', 'shopsensewidget-script'); 
+        </script> 
+        <iframe class="center" src="//shopsensewidget.shopstyle.com/#/?options=%7B%22widgetId%22%3A%2259318a99dd4edb5f06ff6756%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid6644-39435238-4%22%2C%22size%22%3A180%2C%22columns%22%3A1%2C%22rows%22%3A1%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%2C%22iframeHeight%22%3A255%2C%22iframeWidth%22%3A255%7D"
+        height="255px"
+        width="255px"
+        seamless style="border: 0;">
+        </iframe> 
     </div>
 </div>
+
+<script>
+    var coverImg = $(".latest-posts-img img");
+    
+    for(i = 0; i < coverImg.length; i++) {
+        var landscape = false;
+        if ($(coverImg[i]).width() > $(coverImg[i]).height()) {
+            console.log('here');
+            var landscape = true;
+            $(coverImg[i]).css('margin-top', '0');
+        }
+    }
+</script>
