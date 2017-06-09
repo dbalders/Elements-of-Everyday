@@ -26,17 +26,24 @@
                     <section class="post-excerpt">
                         <header class="home-post-header">
                             <h2 class="home-post-title"><a href="{{url}}">{{title}}</a></h2>
-                            <time class="home-post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM, YYYY"}}</time>
+                            <div class="home-post-meta">
+                                {{#if author.image}}<img class="author-thumb" src="{{author.image}}?w=50" alt="{{author.name}}" nopin="nopin" />{{/if}}
+                                {{author}}
+                                {{tags prefix=" on "}}
+                                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                            </div>
                         </header>
-                        {{!-- <img src="{{image}}"> --}}
-                        <p>{{content}}</p>
+                        <img src="{{image}}">
+                        <div>
+                            {{#if meta_description}}
+                                {{meta_description}}
+                             {{/if}}
+                        </div>
+                        <div class="flex">
+                            <a class="center read-more" alt="Read More" href="{{url}}">Read More</a>
+                        </div>
+                        {{!-- <p>{{content}}</p> --}}
                     </section>
-                    <footer class="home-post-meta">
-                        {{#if author.image}}<img class="author-thumb" src="{{author.image}}?w=50" alt="{{author.name}}" nopin="nopin" />{{/if}}
-                        {{author}}
-                        {{tags prefix=" on "}}
-                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-                    </footer>
                 </article>
                 {{/foreach}}
             </div>

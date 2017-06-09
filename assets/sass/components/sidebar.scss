@@ -35,6 +35,11 @@
     }
 }
 
+#optin-link {
+    text-decoration: none;
+    color: white;
+}
+
 #optin {
     margin: 25px auto;
     text-align: center;
@@ -43,7 +48,7 @@
     color: white;
     cursor: pointer;
     font-family: cormorant;
-    font-size: 2.25rem;
+    font-size: 2.25rem; 
 }
 
 .modal-header {
