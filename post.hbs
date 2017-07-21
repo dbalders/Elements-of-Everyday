@@ -3,7 +3,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div class="posts-header">
+        <div class="posts-header flex-one">
             {{#post}}
                 <div class="post-header-image">
                     <img src="{{image}}">
@@ -17,12 +17,12 @@
                 </div>
             {{/post}}
         </div>
-        <div id="content" class="flex-content theme-content flex">
+        <div id="content" class="flex-content theme-content flex flex-one">
             <article class="{{post_class}}">
                 {{#post}}
                     <div class="post-wrapper">
                         <div class="post-content">
-                            <div class="post-header-info flex">
+                            <div class="post-header-info flex flex-info">
                                 <div class="post-header-text">
                                     <h4 class="post-title">{{title}}</h4>
                                     <section class="post-meta">
