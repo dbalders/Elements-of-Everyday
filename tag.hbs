@@ -8,10 +8,10 @@
 {{! The main content area on the homepage }}
 <div class="home-carousel">
     {{#foreach posts limit="1"}}
-        {{!-- <div class="home-carousel-image flex-vertical" style="background: url('{{image}}') no-repeat center center fixed;background-size:cover;"> --}}
+        {{!-- <div class="home-carousel-image flex-vertical" style="background: url('{{img_url feature_image}}') no-repeat center center fixed;background-size:cover;"> --}}
         <a class="carousel-overlay" href="{{url}}"></a>
         <div class="home-carousel-image">
-            <img src="{{image}}">
+            <img src="{{img_url feature_image}}">
         </div>
         <a class="carousel-info flex-vertical" href="{{url}}">
             <div class="carousel-date">{{date}}</div>
@@ -31,11 +31,11 @@
                             <h2 class="home-post-title"><a href="{{url}}">{{title}}</a></h2>
                             <time class="home-post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM, YYYY"}}</time>
                         </header>
-                        {{!-- <img src="{{image}}"> --}}
+                        {{!-- <img src="{{img_url feature_image}}"> --}}
                         <p>{{content}}</p>
                     </section>
                     <footer class="home-post-meta">
-                        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+                        {{#if author.profile_image}}<img class="author-thumb" src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
                         {{author}}
                         {{tags prefix=" on "}}
                         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
