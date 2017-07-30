@@ -39,8 +39,8 @@
         {{#get "posts" filter="tags:popular" limit=4}}
             {{#foreach posts}}
                 <a class="latest-posts latest-posts-popular flex" href="{{url}}">
-                    <div class="latest-posts-img">
-                        <img src="{{img_url feature_image}}?w=150"></img>
+                    <div class="latest-posts-img flex-one">
+                        <img src="{{img_url feature_image}}?w=100"></img>
                     </div>
                     <div class="latest-posts-info flex-one flex-vertical">
                         <div class="latest-posts-title">{{title}}</div>

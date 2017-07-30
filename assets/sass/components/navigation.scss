@@ -18,6 +18,9 @@
             padding: 10px 0;
         }
     }
+    .nav-item {
+        max-width: 20%;
+    }
     @media (max-width: 600px) {
         position: relative;
         flex-direction: column;

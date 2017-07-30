@@ -157,12 +157,14 @@
         // margin: auto 0;
         overflow: hidden;
         white-space: nowrap;
+        max-width: 200px;
         .latest-posts-title {
             font-size: 1.5rem;
             text-overflow: ellipsis;
             overflow: hidden;
             font-family: cormorant;
             color: black;
+            max-width: 200px;
         }
         .latest-posts-date {
             font-size: 1.2rem;
@@ -177,6 +179,12 @@
                 font-size: 1.6rem;
             }
         }
+    }
+}
+
+.sidebar-instagram {
+    iframe {
+        margin: auto;
     }
 }
 
