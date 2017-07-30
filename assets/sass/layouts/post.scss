@@ -12,7 +12,6 @@
 //     max-width: 900px;
 //     margin: auto;
 // }
-
 .post-content {
     width: 90%;
     margin: auto;
@@ -23,15 +22,15 @@
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        img {
+            width: 100%;
+        }
         @media (max-width: 800px) {
             font-size: 1.75rem;
         }
         @media (max-width: 600px) {
             font-size: 2rem;
         }
-    }
-    img {
-        width: 100%;
     }
     h1,
     h2,
@@ -229,6 +228,7 @@
 }
 
 
+
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
    ========================================================================== */
@@ -320,6 +320,7 @@
 }
 
 
+
 /* Special styles for posts with no cover images */
 
 .read-next-story.no-cover {
@@ -344,9 +345,10 @@
 }
 
 
+
 /* if there are two posts without covers, put a border between them */
 
-.read-next-story.no-cover + .read-next-story.no-cover {
+.read-next-story.no-cover+.read-next-story.no-cover {
     border-left: rgba(0, 0, 100, 0.04) 1px solid;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -354,9 +356,10 @@
 }
 
 
+
 /* Correctly position site-footer when next to the .read-next container */
 
-.read-next + .site-footer {
+.read-next+.site-footer {
     position: absolute;
     bottom: 0;
     left: 0;
