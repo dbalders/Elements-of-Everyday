@@ -3,7 +3,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div class="posts-header">
+        <div class="posts-header flex-one">
             {{#post}}
                 <div class="post-header-image">
                     <img src="{{img_url feature_image}}">
@@ -14,7 +14,7 @@
                 </div>
             {{/post}}
         </div>
-        <div id="content" class="flex-content theme-content flex">
+        <div id="content" class="flex-content theme-content flex flex-one">
             <article class="{{post_class}}">
                 {{#post}}
                     <div class="post-wrapper">
