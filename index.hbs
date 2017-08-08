@@ -4,18 +4,6 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The main content area on the homepage }}
-<div class="home-carousel">
-    {{#foreach posts limit="1"}}
-        <a class="carousel-overlay" href="{{url}}"></a>
-        <div class="home-carousel-image">
-            <img src="{{img_url feature_image}}">
-        </div>
-        <a class="carousel-info flex-vertical" href="{{url}}">
-            <div class="carousel-date">{{date}}</div>
-            <div class="carousel-title">{{title}}</div>
-        </a>   
-    {{/foreach}}
-</div>
 <main class="content" role="main">
 <div class="wrapper flex-wrapper">
     <div id="content" class="flex-content flex home-content">
@@ -33,9 +21,13 @@
                         </header>
                         <img src="{{img_url feature_image}}">
                         <div>
-                            {{#if meta_description}}
-                                {{meta_description}}
-                             {{/if}}
+                            {{#if excerpt}}
+                                {{excerpt}}
+                            {{else}}
+                                {{#if meta_description}}
+                                    {{meta_description}}
+                                 {{/if}}
+                            {{/if}}
                         </div>
                         <div class="flex">
                             <a class="center read-more" alt="Read More" href="{{url}}">Read More</a>
@@ -51,19 +43,4 @@
     </div>
 </div>
 <script src="/assets/bower_components/moment/min/moment.min.js"></script>
-<script>
-    var coverImg = $(".home-carousel-image img");
-    var landscape = false;
-
-    if (coverImg.width() > coverImg.height()) {
-        coverImg.addClass('landscape-header-image');
-        var landscape = true;
-    }
-
-    $(window).load(setCoverImage(coverImg, landscape));
-
-    $(window).resize(function() {
-        setCoverImage(coverImg, landscape)
-    });
-</script>
 </main>

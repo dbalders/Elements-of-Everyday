@@ -3,17 +3,6 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 <main class="content" role="main">
     <div class="wrapper flex-wrapper">
-        <div class="posts-header flex-one">
-            {{#post}}
-                <div class="post-header-image">
-                    <img src="{{img_url feature_image}}">
-                    <div class="image-overlay"></div>
-                </div>
-                <div class="post-info">
-                    <h1 class="post-title">{{{title}}}</h1>
-                </div>
-            {{/post}}
-        </div>
         <div id="content" class="flex-content theme-content flex flex-one">
             <article class="{{post_class}}">
                 {{#post}}
@@ -56,18 +45,3 @@
         </div>
     </div>
 </main>
-
-<script>
-    var coverImg = $(".post-header-image img");
-    var landscape = false;
-    if (coverImg.width() > coverImg.height()) {
-        coverImg.addClass('landscape-header-image');
-        var landscape = true;
-    }
-
-    $(window).load(setCoverImage(coverImg, landscape));
-
-    $(window).resize(function() {
-        setCoverImage(coverImg, landscape)
-    });
-</script>

@@ -1,77 +1,103 @@
-<div class="nav flex">
-    <div class="flex flex-one nav-item nav-dropdown">
-        <a href="/tag/style" class="flex flex-center top-menu-items">
-            <div>Fashion</div>
-        </a>
-        <div class="nav-dropdown-content">
-            <a href="/tag/outfits" class="flex flex-center top-menu-items">
-                <div>Outfits</div>
+<div class="nav flex flex-vertical">
+    <div class="nav-level-1 flex">
+        <div class="flex flex-one">
+            <i></i>
+        </div>
+        <div class="flex flex-one">
+            <a href={{@blog.url}} class="flex flex-center top-menu-items">
+                <img alt="Dress to Thrive Logo" src="{{@blog.logo}}?w=400" \>
             </a>
-            <a href="/tag/shopping-guides" class="flex flex-center top-menu-items">
-                <div>Shopping Guides</div>
+        </div>
+        <div class="flex flex-one center nav-social">
+            <a class="header-social-link" target="_blank" href="https://twitter.com/dresstothrive">
+                <img class="header-icon" src="{{asset "/images/icons/Twitter_White.png"}}">
+            </a>
+            <a class="header-social-link" target="_blank" href="https://facebook.com/dresstothrive">
+                <img class="header-icon" src="{{asset "/images/icons/Facebook_White.png"}}">
+            </a>
+            <a class="header-social-link" target="_blank" href="https://instagram.com/dresstothrive">
+                <img class="header-icon" src="{{asset "/images/icons/Instagram_White.png"}}">
+            </a>
+            <a class="header-social-link" target="_blank" href="https://pinterest.com/madteaparty">
+                <img class="header-icon" src="{{asset "/images/icons/Pinterest_White.png"}}">
+            </a>
+            <a class="header-social-link" target="_blank" href="https://youtube.com/dresstothrive">
+                <img class="header-icon" style="max-height:30px; max-width:30px;" src="{{asset "/images/icons/YouTube_White.png"}}">
             </a>
         </div>
     </div>
-    <div class="flex flex-one nav-item nav-dropdown">
-        <a href="/tag/life" class="flex flex-center top-menu-items">
-            <div>Lifestyle</div>
-        </a>
-        <div class="nav-dropdown-content">
-            <a href="/tag/home" class="flex flex-center top-menu-items">
-                <div>Life</div>
-            </a>
-            <a href="/tag/wellness" class="flex flex-center top-menu-items">
-                <div>Wellness</div>
-            </a>
+    <div class="nav-level-2 flex">
+        <div class="nav-level-2-container flex flex-one">
+            <div class="flex flex-one nav-item nav-dropdown">
+                <a href="/tag/style" class="flex flex-center top-menu-items">
+                    <div>Fashion</div>
+                </a>
+                <div class="nav-dropdown-content">
+                    <a href="/tag/outfits" class="flex flex-center top-menu-items">
+                        <div>Outfits</div>
+                    </a>
+                    <a href="/tag/shopping-guides" class="flex flex-center top-menu-items">
+                        <div>Shopping Guides</div>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-one nav-item nav-dropdown">
+                <a href="/tag/life" class="flex flex-center top-menu-items">
+                    <div>Lifestyle</div>
+                </a>
+                <div class="nav-dropdown-content">
+                    <a href="/tag/home" class="flex flex-center top-menu-items">
+                        <div>Life</div>
+                    </a>
+                    <a href="/tag/wellness" class="flex flex-center top-menu-items">
+                        <div>Wellness</div>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-one nav-item nav-dropdown">
+                <a href="/tag/travel" class="flex flex-center top-menu-items">
+                    <div>Travel</div>
+                </a>
+                <div class="nav-dropdown-content">
+                    <a href="/tag/outfits" class="flex flex-center top-menu-items">
+                        <div>San Diego</div>
+                    </a>
+                    <a href="/tag/everywhere-else" class="flex flex-center top-menu-items">
+                        <div>Everywhere Else</div>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-one nav-item nav-dropdown">
+                <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
+                    <div>Shop My Looks</div>
+                </a>
+                <div class="nav-dropdown-content">
+                    <a href="/shop-my-closet" class="flex flex-center top-menu-items">
+                        <div>My Closet</div>
+                    </a>
+                    <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
+                        <div>My Instagram Outfits</div>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-one nav-item nav-dropdown">
+                <a href="/about" class="flex flex-center top-menu-items">
+                    <div>About</div>
+                </a>
+                <div class="nav-dropdown-content">
+                    <a href="/about" class="flex flex-center top-menu-items">
+                        <div>Meet Chelsea</div>
+                    </a>
+                    <a href="/contact" class="flex flex-center top-menu-items">
+                        <div>Contact Me</div>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-one nav-item">
+                <a href="/resources" class="flex flex-center top-menu-items">
+                    <div>Resources</div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="flex flex-one nav-item nav-dropdown">
-        <a href="/tag/travel" class="flex flex-center top-menu-items">
-            <div>Travel</div>
-        </a>
-        <div class="nav-dropdown-content">
-            <a href="/tag/outfits" class="flex flex-center top-menu-items">
-                <div>San Diego</div>
-            </a>
-            <a href="/tag/everywhere-else" class="flex flex-center top-menu-items">
-                <div>Everywhere Else</div>
-            </a>
-        </div>
-    </div>
-    <div class="flex flex-one nav-item">
-        <a href={{@blog.url}} class="flex flex-center top-menu-items">
-            <img alt="Dress to Thrive Logo" src="{{@blog.logo}}?w=400" \>
-        </a>
-    </div>
-    <div class="flex flex-one nav-item nav-dropdown">
-        <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
-            <div>Shop My Looks</div>
-        </a>
-        <div class="nav-dropdown-content">
-            <a href="/shop-my-closet" class="flex flex-center top-menu-items">
-                <div>My Closet</div>
-            </a>
-            <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
-                <div>My Instagram Outfits</div>
-            </a>
-        </div>
-    </div>
-    <div class="flex flex-one nav-item nav-dropdown">
-        <a href="/about" class="flex flex-center top-menu-items">
-            <div>About</div>
-        </a>
-        <div class="nav-dropdown-content">
-            <a href="/about" class="flex flex-center top-menu-items">
-                <div>Meet Chelsea</div>
-            </a>
-            <a href="/contact" class="flex flex-center top-menu-items">
-                <div>Contact Me</div>
-            </a>
-        </div>
-    </div>
-    <div class="flex flex-one nav-item">
-        <a href="/resources" class="flex flex-center top-menu-items">
-            <div>Resources</div>
-        </a>
     </div>
 </div>
