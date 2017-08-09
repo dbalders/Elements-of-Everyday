@@ -26,72 +26,41 @@
             </a>
         </div>
     </div>
-    <div class="nav-level-2 flex">
+    <div class="nav-level-2 flex flex-vertical">
         <div class="nav-level-2-container flex flex-one">
-            <div class="flex flex-one nav-item nav-dropdown">
+            <div class="flex flex-one nav-item nav-dropdown" data-src="fashion">
                 <a href="/tag/style" class="flex flex-center top-menu-items">
                     <div>Fashion</div>
                 </a>
-                <div class="nav-dropdown-content">
-                    <a href="/tag/outfits" class="flex flex-center top-menu-items">
-                        <div>Outfits</div>
-                    </a>
-                    <a href="/tag/shopping-guides" class="flex flex-center top-menu-items">
-                        <div>Shopping Guides</div>
-                    </a>
-                </div>
             </div>
-            <div class="flex flex-one nav-item nav-dropdown">
+            <div class="flex flex-one nav-item nav-dropdown" data-src="lifestyle">
                 <a href="/tag/life" class="flex flex-center top-menu-items">
                     <div>Lifestyle</div>
                 </a>
-                <div class="nav-dropdown-content">
-                    <a href="/tag/home" class="flex flex-center top-menu-items">
-                        <div>Life</div>
-                    </a>
-                    <a href="/tag/wellness" class="flex flex-center top-menu-items">
-                        <div>Wellness</div>
-                    </a>
-                </div>
             </div>
-            <div class="flex flex-one nav-item nav-dropdown">
+            <div class="flex flex-one nav-item nav-dropdown" data-src="travel">
                 <a href="/tag/travel" class="flex flex-center top-menu-items">
                     <div>Travel</div>
                 </a>
-                <div class="nav-dropdown-content">
-                    <a href="/tag/outfits" class="flex flex-center top-menu-items">
-                        <div>San Diego</div>
-                    </a>
-                    <a href="/tag/everywhere-else" class="flex flex-center top-menu-items">
-                        <div>Everywhere Else</div>
-                    </a>
-                </div>
+                
             </div>
-            <div class="flex flex-one nav-item nav-dropdown">
+            <div class="flex flex-one nav-item nav-dropdown" data-src="looks">
                 <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
                     <div>Shop My Looks</div>
                 </a>
-                <div class="nav-dropdown-content">
-                    <a href="/shop-my-closet" class="flex flex-center top-menu-items">
-                        <div>My Closet</div>
-                    </a>
-                    <a href="/shop-my-instagram" class="flex flex-center top-menu-items">
-                        <div>My Instagram Outfits</div>
-                    </a>
-                </div>
             </div>
-            <div class="flex flex-one nav-item nav-dropdown">
+            <div class="flex flex-one nav-item">
                 <a href="/about" class="flex flex-center top-menu-items">
                     <div>About</div>
                 </a>
-                <div class="nav-dropdown-content">
+                {{!-- <div class="nav-dropdown-content">
                     <a href="/about" class="flex flex-center top-menu-items">
                         <div>Meet Chelsea</div>
                     </a>
                     <a href="/contact" class="flex flex-center top-menu-items">
                         <div>Contact Me</div>
                     </a>
-                </div>
+                </div> --}}
             </div>
             <div class="flex flex-one nav-item">
                 <a href="/resources" class="flex flex-center top-menu-items">
@@ -99,5 +68,178 @@
                 </a>
             </div>
         </div>
+        <div class="nav-level-2-sub-menu flex">
+            <div class="nav-dropdown-content" data-attr="fashion">
+                <div class="nav-sub-cats flex">
+                    <a href="/tag/fashion" class="sub-menu-items">
+                        <div>All Fashion</div>
+                    </a>
+                    <a href="/tag/outfits" class="sub-menu-items">
+                        <div>Outfits</div>
+                    </a>
+                    <a href="/tag/shopping-guides" class="sub-menu-items">
+                        <div>Shopping Guides</div>
+                    </a>
+                </div>
+                <div class="nav-sub-posts flex">
+                    {{#get "posts" include="tags" filter="tag:fashion" limit="4"}}
+                        {{! Loop through our featured posts }}
+                        {{#foreach posts}}
+                            <a class="sub-menu-info flex flex-vertical" href="{{url}}">
+                                <div class="sub-menu-post-img flex-one">
+                                    <img src="{{img_url feature_image}}?w=300"></img>
+                                </div>
+                                <div class="sub-menu-post-title">{{title}}</div>
+                            </a>
+                        {{else}}
+                        {{! If there are no featured posts}}
+                           <p>No posts!</p>
+                        {{/foreach}}  
+                    {{else}}
+                      <p class="error">{{error}}</p>
+                    {{/get}}
+                </div>
+            </div>
+            <div class="nav-dropdown-content" data-attr="lifestyle">
+                <div class="nav-sub-cats flex">
+                    <a href="/tag/lifestyle" class="sub-menu-items">
+                        <div>All Lifestyle</div>
+                    </a>
+                    <a href="/tag/home" class="sub-menu-items">
+                        <div>Life</div>
+                    </a>
+                    <a href="/tag/wellness" class="sub-menu-items">
+                        <div>Wellness</div>
+                    </a>
+                </div>
+                <div class="nav-sub-posts flex">
+                    {{#get "posts" include="tags" filter="tag:lifestyle" limit="4"}}
+                        {{! Loop through our featured posts }}
+                        {{#foreach posts}}
+                            <a class="sub-menu-info flex flex-vertical" href="{{url}}">
+                                <div class="sub-menu-post-img flex-one">
+                                    <img src="{{img_url feature_image}}?w=300"></img>
+                                </div>
+                                <div class="sub-menu-post-title">{{title}}</div>
+                            </a>
+                        {{else}}
+                        {{! If there are no featured posts}}
+                           <p>No posts!</p>
+                        {{/foreach}}  
+                    {{else}}
+                      <p class="error">{{error}}</p>
+                    {{/get}}
+                </div>
+            </div>
+            <div class="nav-dropdown-content" data-attr="travel">
+                <div class="nav-sub-cats flex">
+                    <a href="/tag/travel" class="sub-menu-items">
+                        <div>All Travel</div>
+                    </a>
+                    <a href="/tag/outfits" class="sub-menu-items">
+                        <div>San Diego</div>
+                    </a>
+                    <a href="/tag/everywhere-else" class="sub-menu-items">
+                        <div>Everywhere Else</div>
+                    </a>
+                </div>
+                <div class="nav-sub-posts flex">
+                    {{#get "posts" include="tags" filter="tag:travel" limit="4"}}
+                        {{! Loop through our featured posts }}
+                        {{#foreach posts}}
+                            <a class="sub-menu-info flex flex-vertical" href="{{url}}">
+                                <div class="sub-menu-post-img flex-one">
+                                    <img src="{{img_url feature_image}}?w=300"></img>
+                                </div>
+                                <div class="sub-menu-post-title">{{title}}</div>
+                            </a>
+                        {{else}}
+                        {{! If there are no featured posts}}
+                           <p>No posts!</p>
+                        {{/foreach}} 
+                    {{else}}
+                      <p class="error">{{error}}</p>
+                    {{/get}}
+                </div>
+            </div>
+
+            <div class="nav-dropdown-content" data-attr="looks">
+                <div class="nav-sub-cats flex">
+                    <a href="/tag/shop-my-looks" class="sub-menu-items">
+                        <div>All Looks</div>
+                    </a>
+                    <a href="/shop-my-closet" class="sub-menu-items">
+                        <div>My Closet</div>
+                    </a>
+                    <a href="/shop-my-instagram" class="sub-menu-items">
+                        <div>My Instagram Outfits</div>
+                    </a>
+                </div>
+                <div class="nav-sub-posts flex">
+                    {{#get "posts" include="tags" filter="tag:looks" limit="4"}}
+                        {{! Loop through our featured posts }}
+                        {{#foreach posts}}
+                            <a class="sub-menu-info flex flex-vertical" href="{{url}}">
+                                <div class="sub-menu-post-img flex-one">
+                                    <img src="{{img_url feature_image}}?w=300"></img>
+                                </div>
+                                <div class="sub-menu-post-title">{{title}}</div>
+                            </a>
+                        {{else}}
+                        {{! If there are no featured posts}}
+                           <p>No posts!</p>
+                        {{/foreach}} 
+                    {{else}}
+                      <p class="error">{{error}}</p>
+                    {{/get}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+//Start of menu animations
+//When mouse goes over a nav item
+$('.nav-item').mouseenter(function() {
+    //If that nav item has the dropdown class
+    if ($(this).hasClass('nav-dropdown')) {
+        //If this menu item is not currently open, close anything open and open this item
+        if (!$(this).hasClass('open')) {
+            $('.nav-dropdown-content').slideUp(200);
+            $("div[data-attr='" + $(this).attr('data-src') +"']").slideDown(400);
+            //Set color of this item to white and the rest to gray
+            $('.nav .top-menu-items').css('color', '#7f7f7f');
+            $(this).find('.top-menu-items').css('color', '#ffffff');
+            //Remove all open classes and add back an open class to this one item
+            $('.nav-dropdown').removeClass('open');
+            $(this).addClass('open');
+        }
+    } else {
+        //If the item doesn't have the dropdown class, make sure everything is slid up
+        $('.nav-dropdown-content').slideUp(200);
+        $('.nav .top-menu-items').css('color', '#7f7f7f');
+        $(this).find('.top-menu-items').css('color', '#ffffff');
+    }
+});
+
+//When mouse leaves the nav item
+$('.nav-item').mouseleave(function() {
+    //Check first to see if mouse is in the content section, and if it is, hold, if not, slide up the menu
+    if ($('.nav-dropdown-content:hover').length != 0) {
+        // $('.nav .top-menu-items').css('color', 'white');
+    } else {
+        $('.nav-dropdown-content').slideUp(200);
+        $('.nav-dropdown').removeClass('open');
+        $('.nav .top-menu-items').css('color', 'white');
+    }
+});
+
+//If the mouse is in the content section, then this will slide things up once it leaves this section
+$('.nav-dropdown-content').mouseleave(function() {
+    $(this).slideUp(200);
+    $('.nav .top-menu-items').css('color', 'white');
+    $(this).find('.top-menu-items').css('color', null);
+    $('.nav-dropdown').removeClass('open');
+});
+</script>

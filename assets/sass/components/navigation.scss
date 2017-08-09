@@ -9,7 +9,7 @@
         text-decoration: none;
         margin: 0 auto;
         font-size: 1.5rem;
-        font-family: 'maison',sans-serif;
+        font-family: 'maison', sans-serif;
         font-weight: 100;
         letter-spacing: 2px;
         color: white;
@@ -41,41 +41,59 @@
 }
 
 
+
+
+
+
 /* The container <div> - needed to position the dropdown content */
+
 .nav-dropdown {
     position: relative;
 }
 
+
+
+
+
 /* Dropdown Content (Hidden by Default) */
+
 .nav-dropdown-content {
     display: none;
-    position: absolute;
     background-color: black;
     width: 100%;
     top: 80px;
-    border-top: 1px solid;
     text-align: center;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 
+
+
+
+
 /* Links inside the dropdown */
+
 .nav-dropdown-content a {
     color: black;
-    padding: 15px 0;
+    padding: 15px 15px;
     text-decoration: none;
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.nav-dropdown-content a:hover {background-color: #f1f1f1}
+
 
 /* Show the dropdown menu on hover */
+
 .nav-dropdown:hover .nav-dropdown-content {
     display: block;
 }
 
+
+
+
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .nav-dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
@@ -106,5 +124,63 @@
     background-color: black;
     .nav-level-2-container {
         margin: 0 20%;
+    }
+}
+
+.nav-level-2-sub-menu {
+    position: relative;
+    .nav-dropdown-content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .nav-sub-cats {
+        margin: 0 10%;
+    }
+    .sub-menu-items {
+        color: white;
+        padding: 10px 15px;
+        font-family: 'maison', sans-serif;
+        font-weight: 100;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+.nav-sub-posts {
+    padding: 10px 0;
+    margin: 0 10%;
+    .sub-menu-info {
+        width: 25%;
+        margin: auto;
+        color: white;
+        &:first-child {
+            padding-left: 0px;
+        }
+        &:last-child {
+            padding-right: 0px;
+        }
+        .sub-menu-post-img {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin: auto;
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                max-width: 125%;
+                max-height: 125%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 100%;
+                width: auto;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }
