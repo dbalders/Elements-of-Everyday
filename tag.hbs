@@ -6,19 +6,6 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The main content area on the homepage }}
-<div class="home-carousel">
-    {{#foreach posts limit="1"}}
-        {{!-- <div class="home-carousel-image flex-vertical" style="background: url('{{img_url feature_image}}') no-repeat center center fixed;background-size:cover;"> --}}
-        <a class="carousel-overlay" href="{{url}}"></a>
-        <div class="home-carousel-image">
-            <img src="{{img_url feature_image}}">
-        </div>
-        <a class="carousel-info flex-vertical" href="{{url}}">
-            <div class="carousel-date">{{date}}</div>
-            <div class="carousel-title">{{title}}</div>
-        </a>   
-    {{/foreach}}
-</div>
 <main class="content" role="main">
 <div class="wrapper flex-wrapper">
     <div id="content" class="flex-content flex home-content">
