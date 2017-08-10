@@ -172,24 +172,6 @@
                         <div>My Instagram Outfits</div>
                     </a>
                 </div>
-                <div class="nav-sub-posts flex">
-                    {{#get "posts" include="tags" filter="tag:looks" limit="4"}}
-                        {{! Loop through our featured posts }}
-                        {{#foreach posts}}
-                            <a class="sub-menu-info flex flex-vertical" href="{{url}}">
-                                <div class="sub-menu-post-img flex-one">
-                                    <img src="{{img_url feature_image}}?w=300"></img>
-                                </div>
-                                <div class="sub-menu-post-title">{{title}}</div>
-                            </a>
-                        {{else}}
-                        {{! If there are no featured posts}}
-                           <p>No posts!</p>
-                        {{/foreach}} 
-                    {{else}}
-                      <p class="error">{{error}}</p>
-                    {{/get}}
-                </div>
             </div>
         </div>
     </div>
