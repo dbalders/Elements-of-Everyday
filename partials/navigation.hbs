@@ -223,6 +223,15 @@ function navDropdowns() {
             $(this).find('.top-menu-items').css('color', null);
             $('.nav-dropdown').removeClass('open');
         });
+
+        $('.sub-menu-items').mouseenter(function() {
+            $('.sub-menu-items').css('color', '#7f7f7f');
+            $(this).css('color', '#ffffff');
+        });
+        $('.sub-menu-items').mouseleave(function() {
+            $('.sub-menu-items').css('color', '#ffffff');
+            $(this).css('color', null);
+        });
     } else {
         $('.nav-item').unbind('mouseenter mouseleave');
         $('.nav-dropdown-content').unbind('mouseleave');
