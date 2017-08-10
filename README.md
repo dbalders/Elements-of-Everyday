@@ -1,1 +1,1 @@
-#amerzdfs
+Theme for dresstothrive.com
