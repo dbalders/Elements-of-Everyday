@@ -53,14 +53,6 @@
                 <a href="/about" class="flex flex-center top-menu-items">
                     <div>About</div>
                 </a>
-                {{!-- <div class="nav-dropdown-content">
-                    <a href="/about" class="flex flex-center top-menu-items">
-                        <div>Meet Chelsea</div>
-                    </a>
-                    <a href="/contact" class="flex flex-center top-menu-items">
-                        <div>Contact Me</div>
-                    </a>
-                </div> --}}
             </div>
             <div class="flex flex-one nav-item">
                 <a href="/resources" class="flex flex-center top-menu-items">
@@ -177,6 +169,47 @@
     </div>
 </div>
 
+<div class="fixed-nav">
+    <div class="fixed-nav-container flex">
+        <a href={{@blog.url}} class="flex flex-center fixed-nav-logo">
+            <img alt="Dress to Thrive Logo" src="{{asset "images/thrive-white.png"}}?w=300" \>
+        </a>
+        <div class="fixed-nav-links flex">
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/tag/fashion" class="flex flex-center">
+                    <div>Fashion</div>
+                </a>
+            </div>
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/tag/lifestyle" class="flex flex-center">
+                    <div>Lifestyle</div>
+                </a>
+            </div>
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/tag/travel" class="flex flex-center">
+                    <div>Travel</div>
+                </a>
+                
+            </div>
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/shop-my-instagram" class="flex flex-center">
+                    <div>Shop My Looks</div>
+                </a>
+            </div>
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/about" class="flex flex-center">
+                    <div>About</div>
+                </a>
+            </div>
+            <div class="flex flex-one fixed-nav-item">
+                <a href="/resources" class="flex flex-center top-menu-items">
+                    <div>Resources</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 //Start of menu animations
 function navDropdowns() {
@@ -238,10 +271,38 @@ function navDropdowns() {
     }
 }
 
+function showFixedNav(speed) {
+    $('.fixed-nav').slideDown(speed);
+}
+
+function hideFixedNav(speed) {
+    $('.fixed-nav').slideUp(speed);
+}
+
+
+//Once document is ready, initialize the dropdown
 $(document).ready(function() {
     navDropdowns();
+
+    //On resize initialize dropdown or disable depending on screen size
     $(window).resize(function() {
         navDropdowns();
     });
+
+    //On scroll show dropdown
+    $(window).on('wheel', function(e) {
+
+        var delta = e.originalEvent.deltaY;
+
+        if ((delta < -1) && ($(window).scrollTop() > 300))  {
+            showFixedNav(400);
+        } else {
+            if ((delta > 0) || ($(window).scrollTop() < 300)) {
+                hideFixedNav(200);
+            }
+            
+        };
+    });
+
 });
 </script>
