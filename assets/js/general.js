@@ -1,5 +1,5 @@
 function fluidBoxInit() {
-    $('.home-lineup-container a')
+    $('#content a')
         .on('openstart.fluidbox', function() {
             $('.home-button').hide();
         })
