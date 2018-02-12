@@ -67,6 +67,19 @@
     }
 }
 
+.home-image,
+.content-home-image p img {
+    width: 100%;
+}
+
+.full-post p {
+    text-align: center;
+}
+
+.full-post p img {
+    width: 80%;
+}
+
 .post-header-social {
     margin-left: auto;
     .social-title {
@@ -99,6 +112,23 @@
 }
 
 .post-content {
+    margin: auto;
+}
+
+.side-by-side {
+    max-width: 800px;
+    margin: auto;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.side-by-side .flex-one {
+    max-width: 395px;
+    width: 45%;
+    min-width: 250px;
+    padding: 5px;
     margin: auto;
 }
 
@@ -161,6 +191,10 @@
     font-family: 'Nothing You Could Do', cursive;
 }
 
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
 
 /* ==========================================================================
@@ -255,6 +289,9 @@
 
 
 
+
+
+
 /* Special styles for posts with no cover images */
 
 .read-next-story.no-cover {
@@ -280,6 +317,9 @@
 
 
 
+
+
+
 /* if there are two posts without covers, put a border between them */
 
 .read-next-story.no-cover+.read-next-story.no-cover {
@@ -288,6 +328,9 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+
+
 
 
 

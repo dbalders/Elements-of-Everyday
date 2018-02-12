@@ -4,7 +4,7 @@
 
 body {
     font-size: 1.7rem;
-    font-family: cormorant,'Open Sans',sans-serif;
+    font-family: cormorant, 'Open Sans', sans-serif;
 }
 
 .flex-wrapper {
@@ -60,6 +60,11 @@ body {
     justify-content: center;
     -webkit-justify-content: center;
     -ms-justify-content: center;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
 }
 
 .center {
