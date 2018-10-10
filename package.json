@@ -2,6 +2,7 @@
     "name": "dresstothrive",
     "description": "Theme for https://wwwdresstothrive.com",
     "version": "2.0.0",
+    "keywords": ["ghost-theme"],
     "engines": {
         "ghost": ">=1.0.0"
     },
