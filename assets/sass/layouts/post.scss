@@ -20,8 +20,7 @@
         font-size: 1.6rem;
         text-align: left;
         max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 10px auto;
         img {
             width: 100%;
         }
@@ -44,6 +43,7 @@
 }
 
 .post-header-info {
+    width: 100%;
     margin: 25px 0 10px;
     .post-title {
         font-size: 3rem;
@@ -378,6 +378,10 @@ pre {
 
 .kg-width-full figcaption {
     padding: 0 1.5em;
+}
+
+figcaption {
+    text-align: center;
 }
 
 .kg-embed-card {
