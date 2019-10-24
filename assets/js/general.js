@@ -1,5 +1,5 @@
 function fluidBoxInit() {
-    $('#content a').not("#sidebar")
+    $('.home-section-container a, .post a')
         .on('openstart.fluidbox', function() {
             $('.home-button').hide();
         })
