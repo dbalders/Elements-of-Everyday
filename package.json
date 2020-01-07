@@ -4,7 +4,8 @@
     "version": "2.0.0",
     "keywords": ["ghost-theme"],
     "engines": {
-        "ghost": ">=1.0.0"
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
     },
     "author": {
         "name": "david balderston",
@@ -12,6 +13,25 @@
         "url": "https://www.dresstothrive.com"
     },
     "config": {
-        "posts_per_page": 6
-    }
+        "posts_per_page": 6,
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
 }
